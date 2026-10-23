@@ -120,8 +120,8 @@ input { font: inherit; }
   width: 34px; height: 34px; border-radius: 10px; background: var(--navy); color: var(--orange);
   display: grid; place-items: center; font-family: var(--serif); font-weight: 900; font-size: 1.25rem;
 }
-.logo__word { font-family: var(--serif); font-weight: 700; font-size: 1.3rem; color: var(--navy); letter-spacing: -.02em; }
-.logo__word em { color: var(--orange); }
+.logo__word { font-family: var(--serif); font-weight: 900; font-size: 1.45rem; color: var(--navy); letter-spacing: -.02em; white-space: nowrap; }
+.logo__word em { color: var(--orange); font-style: normal; }
 .logo--light .logo__word { color: #fff; }
 .logo--light .logo__mark { background: var(--orange); color: var(--navy); }
 
