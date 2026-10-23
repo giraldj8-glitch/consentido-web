@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConSentido para tu equipo</title>
+  <meta name="description" content="Diseñamos las operaciones humanas que le devuelven a tu organización el tiempo que pierde en desorden." />
+  <meta name="theme-color" content="#F2F1ED" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E3A5F'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-weight='900' font-size='38' fill='%23E85A2C'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-base="../" class="page-biz">
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="../" class="logo" aria-label="ConSentido, inicio">
+      <span class="logo__mark" aria-hidden="true">C</span>
+      <span class="logo__word">Con<em>Sentido</em></span>
+    </a>
+
+    <button class="search-pill" id="openSearch" type="button" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span>¿Qué quieres ordenar hoy?</span>
+      <kbd>/</kbd>
+    </button>
+
+    <nav class="nav__links" aria-label="Principal">
+      <a href="../#metodo">El Método</a>
+      <a href="../para-ti/">Para ti</a>
+      <a href="./" aria-current="page">Para tu equipo</a>
+      <a href="../para-ti/#aprende">Aprende</a>
+      <a href="../#planes">Precios</a>
+    </nav>
+
+    <a href="#top" class="btn btn--primary btn--sm nav__cta">Agendar conversación</a>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="../#metodo">El Método</a>
+    <a href="../para-ti/">Para ti</a>
+    <a href="./" aria-current="page">Para tu equipo</a>
+    <a href="../para-ti/#aprende">Aprende</a>
+    <a href="../#planes">Precios</a>
+    <a href="#top" class="btn btn--primary">Agendar conversación</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═════════ HERO + FORMULARIO (como Platzi Business) ═════════ -->
+<section class="biz-hero" id="top">
+  <div class="wrap biz-hero__grid">
+    <div class="biz-hero__copy">
+      <p class="crumbs crumbs--light"><a href="../">ConSentido</a> / Para tu equipo</p>
+      <p class="eyebrow light">ConSentido para tu equipo</p>
+      <h1 class="biz-hero__title">Ordena tu operación y <span class="accent">compruébalo en el tiempo que recupera tu equipo.</span></h1>
+      <p class="biz-hero__sub">Tú nos cuentas qué duele y nosotros te decimos por dónde empezar.</p>
+      <div class="biz-hero__ctas">
+        <a href="#formas" class="btn btn--light">Conoce el diagnóstico de 2 semanas</a>
+      </div>
+      <ul class="biz-hero__proof">
+        <li>Arquitectos de procesos, no instaladores de software</li>
+        <li>Diseñamos contigo, no para ti</li>
+      </ul>
+    </div>
+
+    <form class="form biz-form" id="contactForm" novalidate>
+      <p class="biz-form__title">Agenda una conversación</p>
+      <label class="field"><span>Tu nombre</span><input type="text" name="nombre" autocomplete="name" placeholder="Ana Restrepo" required /></label>
+      <label class="field"><span>Correo de trabajo</span><input type="email" name="email" autocomplete="email" placeholder="ana@tuorganizacion.com" required /></label>
+      <label class="field"><span>Tu organización</span><input type="text" name="org" autocomplete="organization" placeholder="Nombre de tu organización" required /></label>
+      <div class="biz-form__row">
+        <label class="field"><span>Tu cargo</span>
+          <select name="cargo" required>
+            <option value="">Elige una opción</option>
+            <option>Dirección general</option>
+            <option>Dirección de operaciones</option>
+            <option>Dirección financiera</option>
+            <option>Gerencia de área</option>
+            <option>Líder de equipo</option>
+            <option>Otro cargo</option>
+          </select>
+        </label>
+        <label class="field"><span>Personas</span>
+          <select name="tamano" required>
+            <option value="">Elige un rango</option>
+            <option>1 a 20</option>
+            <option>21 a 50</option>
+            <option>51 a 200</option>
+            <option>Más de 200</option>
+          </select>
+        </label>
+      </div>
+      <label class="field"><span>¿Qué te preocupa hoy?</span>
+        <select name="reto">
+          <option value="">Elige una opción</option>
+          <option>La operación: procesos e información</option>
+          <option>La cultura: lo que decimos vs. lo que vivimos</option>
+          <option>Las dos</option>
+          <option>Todavía no lo sé</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn--primary btn--block btn--lg" id="formBtn">Agendar conversación</button>
+      <p class="biz-form__note">Daniela o Kevin te escriben para agendar 30 minutos, sin compromiso.</p>
+      <p class="form__msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ═════════ CONFIANZA: sectores + datos ═════════ -->
+<section class="biz-trust" aria-labelledby="trust-title">
+  <div class="wrap">
+    <div class="biz-trust__head">
+      <h2 id="trust-title" class="h-sub">Equipos que ya trabajan con sentido</h2>
+      <span class="placeholder-tag" title="Reemplazar por logos y casos con permiso">Casos en documentación</span>
+    </div>
+    <!-- PLACEHOLDER: reemplazar por logos y casos reales con permiso de cada cliente -->
+    <div class="sector-row">
+      <article class="sector reveal"><span class="sector__ico" aria-hidden="true">◎</span><h3>Cooperación internacional</h3><p>Operaciones de investigación con equipos en varias regiones.</p></article>
+      <article class="sector reveal"><span class="sector__ico" aria-hidden="true">▦</span><h3>Sector público</h3><p>Secretarías y equipos de proyectos con muchas manos.</p></article>
+      <article class="sector reveal"><span class="sector__ico" aria-hidden="true">❋</span><h3>Empresa familiar</h3><p>Organizaciones en transición generacional.</p></article>
+      <article class="sector reveal"><span class="sector__ico" aria-hidden="true">✎</span><h3>Educación superior</h3><p>Procesos académicos y administrativos.</p></article>
+      <article class="sector reveal"><span class="sector__ico" aria-hidden="true">⇄</span><h3>Servicios e impacto</h3><p>Equipos que crecieron rápido y desordenado.</p></article>
+    </div>
+
+    <dl class="facts">
+      <div><dt>6 pasos</dt><dd>El Método ConSentido, probado con equipos</dd></div>
+      <div><dt>2 semanas</dt><dd>para saber por dónde empezar</dd></div>
+      <div><dt>3 a 6 meses</dt><dd>dura un proyecto inicial típico</dd></div>
+      <div><dt>Notion</dt><dd>Certified Consultants</dd></div>
+      <div><dt>ACMP</dt><dd>Gestión del cambio certificada</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═════════ ¿HAS DICHO ALGUNA DE ESTAS FRASES? ═════════ -->
+<section class="mirror" id="frases" aria-labelledby="mirror-title">
+  <div class="wrap">
+    <p class="eyebrow">Si esto te suena familiar</p>
+    <h2 id="mirror-title" class="h-display">¿Has dicho alguna<br />de estas frases?</h2>
+
+    <div class="mirror__grid" data-mirror>
+      <ul class="mirror__list" role="tablist" aria-label="Frases frecuentes">
+        <li><button type="button" role="tab" data-i="0">«Las reuniones de coordinación no deciden nada»</button></li>
+        <li><button type="button" role="tab" data-i="1">«Las decisiones se pierden en los chats»</button></li>
+        <li><button type="button" role="tab" data-i="2">«La información está en cinco lugares»</button></li>
+        <li><button type="button" role="tab" data-i="3">«Formar a alguien nuevo toma meses»</button></li>
+        <li><button type="button" role="tab" data-i="4">«Hablamos de cultura, pero vivimos apagando incendios»</button></li>
+        <li><button type="button" role="tab" data-i="5">«Compramos la herramienta y nadie la usa»</button></li>
+      </ul>
+      <div class="mirror__answer" role="tabpanel" aria-live="polite">
+        <p class="mirror__label">La respuesta</p>
+        <p class="mirror__text" data-answer="0">Rituales con dueño y una decisión registrada al final de cada reunión. Menos reuniones, y las que quedan deciden algo.</p>
+        <p class="mirror__text" data-answer="1">Un solo lugar para las decisiones, con responsable y fecha. Lo que se decide no depende de quién leyó el chat.</p>
+        <p class="mirror__text" data-answer="2">La sede digital del equipo: una sola fuente para procesos, documentos y proyectos. Se acaban las islas de información.</p>
+        <p class="mirror__text" data-answer="3">Onboarding estructurado: una persona nueva entiende dónde vive todo en su primera semana, no en su tercer mes.</p>
+        <p class="mirror__text" data-answer="4">Cultura ConSentido: los valores aterrizan en flujos, reuniones y decisiones. Lo que el equipo hace cada día es la cultura real.</p>
+        <p class="mirror__text" data-answer="5">No instalamos software. Co-diseñamos el proceso con quien lo vive, y la herramienta llega después para sostenerlo.</p>
+        <span class="mirror__mark" aria-hidden="true">❋</span>
+      </div>
+    </div>
+
+    <div class="cta-bar">
+      <div><b>¿Te sonó alguna?</b><span>Cuéntanos cuál y te decimos por dónde empezar.</span></div>
+      <a href="#top" class="btn btn--primary">Agendar conversación →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ POR QUÉ LOS CAMBIOS NO SE SOSTIENEN ═════════ -->
+<section class="why-biz" aria-labelledby="whybiz-title">
+  <div class="wrap why-biz__grid">
+    <div>
+      <p class="eyebrow light">Por qué los cambios no se sostienen</p>
+      <h2 id="whybiz-title" class="h-display light">El problema nunca fue la herramienta. <span class="accent">Es que los procesos mal diseñados rompen la cultura.</span></h2>
+      <p class="why-biz__lead">Por eso trabajamos los dos frentes como una sola conversación:</p>
+      <ul class="why-biz__list">
+        <li><b>Co-creación</b> con quienes operan, no solo con el liderazgo.</li>
+        <li><b>Probar en pequeño</b> antes de escalar: fallar es barato y a tiempo.</li>
+        <li><b>Transferencia real:</b> documentación viva y equipo formado.</li>
+      </ul>
+    </div>
+    <div class="bignum">
+      <p class="bignum__main"><span>2</span><small>semanas</small></p>
+      <p class="bignum__cap">para tener el mapa honesto de tu operación y el primer paso definido.</p>
+      <p class="bignum__alt"><span>0</span><small>dependencia</small></p>
+      <p class="bignum__cap">El objetivo es que el cambio se sostenga sin nosotros.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ UN MÉTODO, CUATRO FORMAS ═════════ -->
+<section class="forms4" id="formas" aria-labelledby="forms-title">
+  <div class="wrap">
+    <h2 id="forms-title" class="h-display">Un método. <span class="accent">Cuatro formas de trabajar con tu organización.</span></h2>
+
+    <div class="forms4__show" id="sede">
+      <div>
+        <p class="forms4__lead">Todo termina en <b>la sede digital de tu equipo</b>: donde tu cultura y tu operación se reconocen.</p>
+        <ul class="forms4__bullets">
+          <li>Centro de operaciones: proyectos, prioridades y responsables</li>
+          <li>Sistema de conocimiento: lo que sale de una persona no se va con ella</li>
+          <li>Onboarding estructurado y cultura visible en los flujos</li>
+          <li>Métricas operativas, comparables mes a mes</li>
+        </ul>
+      </div>
+      <div class="mock" role="img" aria-label="Ejemplo de la sede digital de un equipo">
+        <div class="screen is-on">
+          <div class="mock__bar"><i></i><i></i><i></i><span>Sede digital · Equipo de operaciones</span></div>
+          <div class="mock__body">
+            <aside class="mock__side">
+              <p class="mock__label">Equipo</p>
+              <span class="is-on">◎ Centro de operaciones</span><span>❏ Conocimiento</span><span>→ Onboarding</span><span>❋ Cultura visible</span><span>↗ Métricas</span>
+            </aside>
+            <div class="mock__main">
+              <p class="mock__h">Esta semana en el equipo</p>
+              <div class="mock__cols">
+                <div class="mock__col"><p>Operaciones</p><div class="task task--o">Nuevo flujo de compras</div><div class="task">Proveedores al día</div></div>
+                <div class="mock__col"><p>Finanzas</p><div class="task task--m">Cierre de mes</div><div class="task">Cartera</div></div>
+                <div class="mock__col"><p>Decisiones</p><div class="task task--n">Responsable por proyecto</div><div class="task">Acta en un solo lugar</div></div>
+              </div>
+              <div class="mock__meter"><span>Tiempo recuperado del equipo este mes</span><div class="meter"><i style="--w:64%"></i></div><b>32 h</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="forms4__grid">
+      <article class="fway fway--star reveal">
+        <span class="sticker fway__sticker">Puerta de entrada</span>
+        <p class="fway__tag">2 semanas · precio cerrado</p>
+        <h3>Diagnóstico operativo</h3>
+        <p>Inmersión, entrevistas y mapa del estado actual. Sales con el reto prioritario y el primer paso. Vale por sí solo.</p>
+        <a href="#top" class="fway__link">Pedir diagnóstico →</a>
+      </article>
+      <article class="fway reveal">
+        <p class="fway__tag">Lo más demandado · 6 pasos</p>
+        <h3>Procesos ConSentido</h3>
+        <p>Flujos, sistemas y herramientas que le devuelven a tu equipo el tiempo que pierde en desorden.</p>
+        <a href="#procesos" class="fway__link" data-open="#procesos">Ver el método →</a>
+      </article>
+      <article class="fway reveal">
+        <p class="fway__tag">4 fases · ACMP</p>
+        <h3>Cultura ConSentido</h3>
+        <p>Que lo que tu organización dice ser y lo que vive cada día sean la misma cosa.</p>
+        <a href="#cultura" class="fway__link" data-open="#cultura">Ver el método →</a>
+      </article>
+      <article class="fway reveal">
+        <p class="fway__tag">A la medida</p>
+        <h3>Formación y gestión del cambio</h3>
+        <p>Formación in-company y acompañamiento para que el cambio se adopte de verdad.</p>
+        <a href="#top" class="fway__link">Hablemos →</a>
+      </article>
+    </div>
+
+    <div class="cta-bar">
+      <div><b>Un método, cuatro maneras de empezar.</b><span>Te decimos con honestidad cuál le sirve a tu organización.</span></div>
+      <a href="#top" class="btn btn--primary">Agendar conversación →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ METODOLOGÍAS (expandibles) ═════════ -->
+<section class="wrap methods" aria-label="Metodologías">
+  <details class="xp" id="procesos">
+    <summary>
+      <span class="xp__badge" aria-hidden="true">6</span>
+      <span class="xp__head">
+        <small>Metodología propia</small>
+        <h3>Procesos ConSentido</h3>
+        <p>Seis pasos para devolverle a tu equipo el tiempo perdido.</p>
+      </span>
+      <span class="xp__toggle" aria-hidden="true">+</span>
+    </summary>
+    <div class="xp__body">
+      <p class="xp__intro">Un sistema propio de seis pasos, validado con equipos de alto rendimiento. No es una receta de catálogo: es un marco que se adapta al ritmo, contexto y cultura de cada organización.</p>
+      <ol class="steps6">
+        <li><span class="n">01</span><h4>Entendimiento del reto</h4><p>Mapeamos el problema con quienes lo viven: dónde se tranca, a quién afecta, qué duele más. No proponemos soluciones antes de entender.</p><p class="take"><b>Te llevas</b>Diagnóstico claro del estado actual, con cuellos de botella priorizados.</p></li>
+        <li><span class="n">02</span><h4>Definición y enfoque</h4><p>Acotamos el problema: qué proceso atacamos primero, qué objetivo buscamos y cómo sabremos que mejoró.</p><p class="take"><b>Te llevas</b>Reto bien definido, con métrica de éxito y alcance acordado.</p></li>
+        <li><span class="n">03</span><h4>Ideación de la solución</h4><p>Co-creamos con tu equipo formas de trabajar mejor, con la voz del liderazgo y la de quienes operan cada día.</p><p class="take"><b>Te llevas</b>Varias rutas de solución evaluadas con tu equipo, no impuestas.</p></li>
+        <li><span class="n">04</span><h4>Diseño de la idea</h4><p>Diseñamos y materializamos el modelo de solución co-creado, listo para probar.</p><p class="take"><b>Te llevas</b>Arquitectura concreta del nuevo flujo, sistemas y herramientas.</p></li>
+        <li><span class="n">05</span><h4>Prototipado y aprendizaje</h4><p>Probamos en pequeño, medimos y ajustamos antes de escalar. Fallar en pequeño es barato y a tiempo.</p><p class="take"><b>Te llevas</b>Prototipo probado con parte del equipo y ajustado con evidencia.</p></li>
+        <li><span class="n">06</span><h4>Entrega para la transformación</h4><p>Documentamos, formamos a los equipos y dejamos lo necesario para que el cambio se mantenga sin nosotros.</p><p class="take"><b>Te llevas</b>Sede digital implementada, equipo formado e independencia.</p></li>
+      </ol>
+      <p class="xp__label">Lo que nos diferencia en Procesos</p>
+      <div class="diffs">
+        <div class="diff"><h4>No vendemos software</h4><p>Notion, Asana, ClickUp: son herramientas. Lo importante es el proceso que vive dentro. Somos Notion Certified Consultants porque hoy es la que mejor sostiene la sede digital.</p></div>
+        <div class="diff"><h4>No vendemos diagramas</h4><p>Un BPMN bonito no transformó a nadie. Entregamos una operación funcionando, no un PDF.</p></div>
+        <div class="diff"><h4>Co-creamos</h4><p>Tu equipo conoce los problemas mejor que nadie. Trabajamos con ellos, no para ellos: así el cambio se sostiene cuando salimos.</p></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="xp" id="cultura">
+    <summary>
+      <span class="xp__badge xp__badge--n" aria-hidden="true">4</span>
+      <span class="xp__head">
+        <small>Metodología propia</small>
+        <h3>Cultura ConSentido</h3>
+        <p>Cuatro fases para que el propósito pase del discurso a la operación.</p>
+      </span>
+      <span class="xp__toggle" aria-hidden="true">+</span>
+    </summary>
+    <div class="xp__body">
+      <p class="xp__intro">La cultura no se decreta en un offsite. Se construye en cómo trabaja la gente todos los días. Es un viaje en espiral: cada fase profundiza la anterior, y al final la cultura es un sistema vivo que tu organización mantiene por sí sola.</p>
+      <div class="phases4">
+        <details open>
+          <summary><span class="n">01</span><span><h4>Alineación y conexión</h4><p>Reconectamos a las personas con el propósito de la organización.</p></span></summary>
+          <div class="ph-body">Antes de hablar de valores, trabajamos para que individuos y equipos vuelvan a sentirse parte de algo con sentido. Espacios de conversación reales, no talleres motivacionales, donde se puede decir lo que está roto y reconocer lo que está vivo.<div class="take"><b>Te llevas</b>Un mapa honesto del estado emocional y de propósito de tu equipo. Sin maquillaje.</div></div>
+        </details>
+        <details>
+          <summary><span class="n">02</span><span><h4>Propuesta de valor cultural</h4><p>Articulamos lo que tu organización realmente es, no lo que dice ser.</p></span></summary>
+          <div class="ph-body">Definimos juntos qué ofrece la organización, interna y externamente: un marco de referencia para tomar decisiones reales, contratar, diseñar procesos y resolver conflictos.<div class="take"><b>Te llevas</b>Una propuesta de valor cultural que se traduce en decisiones del día a día, no en frases para la pared.</div></div>
+        </details>
+        <details>
+          <summary><span class="n">03</span><span><h4>Experiencia de marca interna</h4><p>Tangibilizamos la cultura en cada punto de contacto.</p></span></summary>
+          <div class="ph-body">Diseñamos cómo se vive la cultura en el onboarding, las reuniones, el feedback, las celebraciones, los conflictos y la salida de las personas.<div class="take"><b>Te llevas</b>Puntos de contacto culturales rediseñados, donde la coherencia entre discurso y práctica se vuelve visible y medible.</div></div>
+        </details>
+        <details>
+          <summary><span class="n">04</span><span><h4>Equipo para el cambio sostenido</h4><p>Construimos la estructura para mantener la cultura sin nosotros.</p></span></summary>
+          <div class="ph-body">Trabajamos en liderazgo distribuido, capacidad interna de gestión del cambio y rituales que sostienen la cultura en los momentos difíciles, porque siempre llegan.<div class="take"><b>Te llevas</b>Liderazgo formado, rituales instalados, métricas culturales y "guardianes culturales" internos.</div></div>
+        </details>
+      </div>
+      <p class="xp__label">Lo que nos diferencia en Cultura</p>
+      <div class="diffs">
+        <div class="diff"><h4>No imponemos modelos</h4><p>Cada organización tiene su historia y su gente. Co-creamos siempre.</p></div>
+        <div class="diff"><h4>Cultura conectada con operación</h4><p>No tratamos la cultura como un proyecto aparte: la conectamos con los procesos diarios, porque ahí vive o muere.</p></div>
+        <div class="diff"><h4>Certificados en ACMP</h4><p>Association of Change Management Professionals: metodología internacional respaldada por evidencia.</p></div>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ═════════ CÓMO SE VERÍA ═════════ -->
+<section class="journey" aria-labelledby="journey-title">
+  <div class="wrap">
+    <p class="eyebrow center">El camino</p>
+    <h2 id="journey-title" class="h-display center">Si decidiéramos trabajar juntos, <span class="accent">así se vería.</span></h2>
+    <ol class="timeline">
+      <li class="reveal"><span class="dot">0</span><span class="dur">2 a 3 semanas</span><h3>Diagnóstico</h3><p>Inmersión operativa y cultural. Entrevistas con tu equipo, mapa del estado actual y el reto prioritario. Te decimos con honestidad por dónde empezar.</p></li>
+      <li class="reveal"><span class="dot">1</span><span class="dur">4 a 8 semanas</span><h3>Diseño y prototipo</h3><p>Co-creación con tu equipo. Diseño del nuevo flujo o de la nueva arquitectura cultural. Prototipo, pruebas e iteración con evidencia.</p></li>
+      <li class="reveal"><span class="dot">2</span><span class="dur">6 a 12 semanas</span><h3>Implementación y transferencia</h3><p>Despliegue gradual, sede digital, formación y documentación viva. Acompañamos hasta que el cambio se sostenga sin nosotros.</p></li>
+    </ol>
+    <p class="center small muted" style="margin-top:2.4rem">Los tiempos varían según contexto y alcance. Un proyecto inicial típico va de 3 a 6 meses.</p>
+  </div>
+</section>
+
+<!-- ═════════ RESULTADOS ═════════ -->
+<section class="results" aria-labelledby="results-title">
+  <div class="wrap">
+    <div class="biz-trust__head">
+      <div>
+        <p class="eyebrow light">Resultados</p>
+        <h2 id="results-title" class="h-display light">Esto pasa cuando <span class="accent">el cambio sí se usa.</span></h2>
+      </div>
+      <span class="placeholder-tag">Ejemplos · casos reales en camino</span>
+    </div>
+    <!-- PLACEHOLDER: reemplazar por citas y cifras reales, con permiso de cada cliente -->
+    <div class="results__quotes">
+      <figure class="rquote reveal">
+        <blockquote>“Las reuniones de coordinación dejaron de ser para ponernos al día. Ahora deciden.”</blockquote>
+        <figcaption><b>Dirección de operaciones</b><span>Organización de cooperación internacional</span></figcaption>
+      </figure>
+      <figure class="rquote reveal">
+        <blockquote>“Por primera vez una persona nueva supo dónde estaba todo en su primera semana.”</blockquote>
+        <figcaption><b>Gerencia</b><span>Empresa familiar en transición</span></figcaption>
+      </figure>
+    </div>
+    <div class="results__metrics">
+      <div class="rmetric"><b>— h</b><span>tiempo recuperado por semana</span></div>
+      <div class="rmetric"><b>— %</b><span>menos reuniones de coordinación</span></div>
+      <div class="rmetric"><b>— días</b><span>para que alguien nuevo sea autónomo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CTA FINAL ═════════ -->
+<section class="biz-final" id="hablemos" aria-labelledby="final-title">
+  <div class="wrap">
+    <h2 id="final-title" class="biz-final__title">Ordenar no sirve de nada si nadie lo sostiene. <span class="accent">Haz que tu equipo sí lo viva.</span></h2>
+    <p class="biz-final__sub">Una conversación de 30 minutos puede ser la diferencia entre seguir gestionando el caos y construir la operación que tu organización necesita para crecer sin quemarse.</p>
+    <a href="#top" class="btn btn--primary btn--lg">Agendar conversación</a>
+  </div>
+</section>
+
+<!-- ═════════ FAQ ═════════ -->
+<section class="faq" aria-labelledby="faq-title">
+  <div class="wrap faq__grid">
+    <div>
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="faq-title" class="h-display">Lo que preguntan antes de decidir</h2>
+    </div>
+    <div class="faq__list">
+      <details><summary>¿Qué incluye el diagnóstico operativo?</summary><p>Dos semanas de inmersión: entrevistas con tu equipo, mapa del estado actual, cuellos de botella priorizados y una recomendación honesta de por dónde empezar: procesos, cultura o ambos.</p></details>
+      <details><summary>¿Cuánto cuesta trabajar con ConSentido?</summary><p>El diagnóstico tiene un precio cerrado que conoces antes de empezar. Los proyectos completos se cotizan según alcance, después del diagnóstico o de la conversación inicial.</p></details>
+      <details><summary>Ya compramos una herramienta. ¿Por qué ustedes?</summary><p>Porque el problema casi nunca es la herramienta. Diseñamos el proceso que vive dentro con quienes lo operan, y luego usamos la herramienta que ya tienen o la que mejor lo sostenga.</p></details>
+      <details><summary>¿Necesitamos usar Notion?</summary><p>No. Somos Notion Certified Consultants porque hoy es la herramienta que mejor sostiene una sede digital, pero trabajamos independientemente de la tecnología.</p></details>
+      <details><summary>¿En cuánto tiempo se ven resultados?</summary><p>El diagnóstico entrega claridad en 2 semanas. Un proyecto inicial típico va de 3 a 6 meses, con prototipos probados desde las primeras semanas.</p></details>
+      <details><summary>¿Quién de mi equipo debe participar?</summary><p>Alguien del liderazgo que patrocine el cambio y las personas que viven el proceso cada día. Sin las dos voces, el cambio no se sostiene.</p></details>
+      <details><summary>¿Cómo manejan la información de mi organización?</summary><p>Con confidencialidad. Solo documentamos un caso públicamente si tu organización lo autoriza.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a href="../" class="logo logo--light"><span class="logo__mark" aria-hidden="true">C</span><span class="logo__word">Con<em>Sentido</em></span></a>
+      <p class="footer__claim">Estudio de operaciones. Hacemos con sentido.</p>
+    </div>
+    <nav aria-label="ConSentido">
+      <p class="footer__h">ConSentido</p>
+      <a href="../#metodo">El Método</a>
+      <a href="../para-ti/">Para ti</a>
+      <a href="./">Para tu equipo</a>
+      <a href="../para-ti/#aprende">Aprende</a>
+    </nav>
+    <nav aria-label="Contacto">
+      <p class="footer__h">Hablemos</p>
+      <!-- PLACEHOLDER: confirmar correo, LinkedIn e Instagram reales -->
+      <a href="mailto:hola@consentido.lat">hola@consentido.lat</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <span class="muted">Bogotá, Colombia</span>
+    </nav>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© 2026 ConSentido</span>
+    <span>Hecho con sentido en Bogotá</span>
+  </div>
+</footer>
+
+<!-- PLACEHOLDER: poner el número real en href="https://wa.me/57XXXXXXXXXX" -->
+<a class="fab" href="#top" aria-label="Escríbenos">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>
+</a>
+
+<div class="search" id="search" role="dialog" aria-modal="true" aria-labelledby="searchLabel" hidden>
+  <div class="search__backdrop" data-close></div>
+  <div class="search__box">
+    <label id="searchLabel" class="search__field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="searchInput" placeholder="Ej: tiempo, Notion, mi equipo, cultura…" autocomplete="off" />
+      <kbd>Esc</kbd>
+    </label>
+    <ul class="search__results" id="searchResults" role="listbox"></ul>
+  </div>
+</div>
+
+<script src="../app.js"></script>
+</body>
+</html>

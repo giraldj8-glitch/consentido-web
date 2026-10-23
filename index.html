@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConSentido · Estudio de operaciones</title>
+  <meta name="description" content="Te ayudamos a alinear lo que eres con lo que haces, a la escala que necesites: en tu vida, en tu equipo, en tu organización." />
+  <meta name="theme-color" content="#F2F1ED" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E3A5F'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-weight='900' font-size='38' fill='%23E85A2C'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ═════════ NAV ═════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="logo" aria-label="ConSentido, inicio">
+      <span class="logo__mark" aria-hidden="true">C</span>
+      <span class="logo__word">Con<em>Sentido</em></span>
+    </a>
+
+    <button class="search-pill" id="openSearch" type="button" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span>¿Qué quieres ordenar hoy?</span>
+      <kbd>/</kbd>
+    </button>
+
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#metodo">El Método</a>
+      <a href="para-ti/">Para ti</a>
+      <a href="para-equipos/">Para tu equipo</a>
+      <a href="para-ti/#aprende">Aprende</a>
+      <a href="#planes">Precios</a>
+    </nav>
+
+    <a href="#hablemos" class="btn btn--primary btn--sm nav__cta">Hablemos</a>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#metodo">El Método</a>
+    <a href="para-ti/">Para ti</a>
+    <a href="para-equipos/">Para tu equipo</a>
+    <a href="para-ti/#aprende">Aprende</a>
+    <a href="#planes">Precios</a>
+    <a href="#hablemos" class="btn btn--primary">Hablemos</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═════════ HERO ═════════ -->
+<section class="hero" id="top">
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <!-- Tarjetas flotantes: como las de cursos de Platzi, pero con la oferta de ConSentido -->
+  <div class="float-cards" aria-hidden="true">
+    <article class="fcard fcard--a">
+      <div class="fcard__cover fcard__cover--orange"><span>1:1</span></div>
+      <h3>Acompañamiento personal</h3>
+      <p class="fcard__by">por Daniela Vivas</p>
+      <p class="fcard__meta">5 sesiones · 75 min cada una</p>
+    </article>
+    <article class="fcard fcard--b">
+      <div class="fcard__cover fcard__cover--navy"><span>⌘</span></div>
+      <h3>Tu sede digital en Notion</h3>
+      <p class="fcard__by">por Kevin Giraldo</p>
+      <p class="fcard__meta">Plantilla + microclases</p>
+    </article>
+    <article class="fcard fcard--c">
+      <div class="fcard__cover fcard__cover--mustard"><span>2 sem</span></div>
+      <h3>Diagnóstico operativo</h3>
+      <p class="fcard__by">para tu equipo</p>
+      <p class="fcard__meta">2 semanas · alcance acotado</p>
+    </article>
+    <article class="fcard fcard--d">
+      <div class="fcard__cover fcard__cover--cream"><span>✉</span></div>
+      <h3>Novedades que sí valen la pena</h3>
+      <p class="fcard__by">newsletter</p>
+      <p class="fcard__meta">Semanal · gratis</p>
+    </article>
+  </div>
+
+  <div class="hero__content">
+    <p class="eyebrow">Estudio de operaciones · Bogotá</p>
+    <h1 class="hero__title">
+      Haces muchas cosas.<br />
+      Pero <span class="accent">¿estás haciendo<br class="br-desk" /> las que importan?</span>
+    </h1>
+    <p class="hero__sub">
+      Te ayudamos a alinear lo que eres con lo que haces, a la escala que necesites:
+      en tu vida, en tu equipo, en tu organización.
+    </p>
+    <div class="hero__ctas">
+      <a href="para-ti/" class="btn btn--primary btn--lg">Empieza por ti</a>
+      <a href="para-equipos/" class="btn btn--ghost btn--lg">ConSentido para tu equipo</a>
+    </div>
+    <p class="hero__note">Empieza gratis con el autodiagnóstico de tiempo recuperado.</p>
+  </div>
+</section>
+
+<!-- ═════════ HISTORIAS ═════════ -->
+<section class="stories" aria-labelledby="stories-title">
+  <div class="wrap stories__head">
+    <h2 id="stories-title" class="h-sub">Creamos historias con sentido</h2>
+    <span class="placeholder-tag" title="Reemplazar por casos reales con permiso de cada persona">Ejemplos · casos reales en camino</span>
+  </div>
+
+  <div class="marquee" data-marquee>
+    <div class="marquee__track">
+      <!-- PLACEHOLDER: reemplazar por casos reales con permiso -->
+      <article class="story">
+        <header><strong>Persona A</strong><span>Emprendedora y mamá</span></header>
+        <blockquote>“Dejé de sentir que no cumplía en ningún frente.”</blockquote>
+        <footer><span>Recuperó</span><b>+6 h / semana</b></footer>
+      </article>
+      <article class="story">
+        <header><strong>Persona B</strong><span>Líder de equipo</span></header>
+        <blockquote>“Por fin sé dónde vive cada cosa de mi trabajo.”</blockquote>
+        <footer><span>Logró</span><b>Su sede digital</b></footer>
+      </article>
+      <article class="story">
+        <header><strong>Organización C</strong><span>Cooperación internacional</span></header>
+        <blockquote>“Las reuniones de coordinación ahora deciden algo.”</blockquote>
+        <footer><span>Redujo</span><b>Ruido operativo</b></footer>
+      </article>
+      <article class="story">
+        <header><strong>Persona D</strong><span>Independiente, 4 proyectos</span></header>
+        <blockquote>“No es hacer más. Es saber qué no hacer.”</blockquote>
+        <footer><span>Ganó</span><b>Claridad semanal</b></footer>
+      </article>
+      <article class="story">
+        <header><strong>Empresa E</strong><span>Empresa familiar en transición</span></header>
+        <blockquote>“La información dejó de vivir en cinco lugares.”</blockquote>
+        <footer><span>Unificó</span><b>Sus islas de información</b></footer>
+      </article>
+      <article class="story">
+        <header><strong>Directora F</strong><span>Directora financiera</span></header>
+        <blockquote>“Mi trabajo ya no invade mis fines de semana.”</blockquote>
+        <footer><span>Recuperó</span><b>Sus domingos</b></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ TRES ESCALAS (scroll fijo, como el showcase de Platzi) ═════════ -->
+<section class="scales" id="escalas" aria-labelledby="scales-title">
+  <div class="wrap scales__intro">
+    <p class="eyebrow center">Una forma de hacer, tres escalas</p>
+    <h2 id="scales-title" class="h-display center">No te vendemos productividad.<br /><span class="accent">Te devolvemos tiempo.</span></h2>
+    <p class="center lead">El mismo método, a la escala que necesites: en tu vida, en tu equipo, en tu organización.</p>
+  </div>
+
+  <div class="scales__track" data-scales>
+    <div class="scales__sticky">
+      <div class="scales__grid">
+
+        <!-- Izquierda: tarjetas de color que se apilan -->
+        <div class="scales__stack">
+          <article class="vcard vcard--orange" data-step="0">
+            <h3 class="vcard__title">Tu vida en un solo lugar</h3>
+            <div class="vcard__foot"><span class="vcard__chip">Para ti</span><span class="vcard__ico" aria-hidden="true">✦</span></div>
+          </article>
+          <article class="vcard vcard--mustard" data-step="1">
+            <h3 class="vcard__title">Tu equipo deja de apagar incendios</h3>
+            <div class="vcard__foot"><span class="vcard__chip">Para tu equipo</span><span class="vcard__ico" aria-hidden="true">⇄</span></div>
+          </article>
+          <article class="vcard vcard--navy" data-step="2">
+            <h3 class="vcard__title">Tu cultura vive en cómo se trabaja</h3>
+            <div class="vcard__foot"><span class="vcard__chip">Para tu organización</span><span class="vcard__ico" aria-hidden="true">❋</span></div>
+          </article>
+        </div>
+
+        <!-- Centro: la sede digital cambia de escala -->
+        <div class="scales__stage">
+          <div class="mock" role="img" aria-label="Ejemplo de sede digital que cambia de escala: personal, de equipo y de organización">
+            <div class="screen" data-screen="0">
+              <div class="mock__bar"><i></i><i></i><i></i><span>Mi sede digital</span></div>
+              <div class="mock__body">
+                <aside class="mock__side">
+                  <p class="mock__label">Espacios</p>
+                  <span class="is-on">☀︎ Hoy y semana</span><span>⇣ Captura</span><span>◧ Proyectos y áreas</span><span>↻ Revisión semanal</span>
+                </aside>
+                <div class="mock__main">
+                  <p class="mock__h">Tu semana con sentido</p>
+                  <div class="mock__cols">
+                    <div class="mock__col"><p>Importa</p><div class="task task--o">Cerrar facturación del 15</div><div class="task">Plan financiero del emprendimiento</div></div>
+                    <div class="mock__col"><p>Puede esperar</p><div class="task">Revisar propuestas</div><div class="task task--m">Delegar seguimiento</div></div>
+                    <div class="mock__col"><p>Para mí</p><div class="task task--n">Correr el sábado</div><div class="task">Clase de baile</div></div>
+                  </div>
+                  <div class="mock__meter"><span>Tiempo recuperado esta semana</span><div class="meter"><i style="--w:72%"></i></div><b>5 h 40 min</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="screen" data-screen="1">
+              <div class="mock__bar"><i></i><i></i><i></i><span>Sede digital · Equipo de operaciones</span></div>
+              <div class="mock__body">
+                <aside class="mock__side">
+                  <p class="mock__label">Equipo</p>
+                  <span class="is-on">◎ Centro de operaciones</span><span>❏ Conocimiento</span><span>→ Onboarding</span><span>▦ Espacios de equipo</span>
+                </aside>
+                <div class="mock__main">
+                  <p class="mock__h">Esta semana en el equipo</p>
+                  <div class="mock__cols">
+                    <div class="mock__col"><p>Operaciones</p><div class="task task--o">Nuevo flujo de compras</div><div class="task">Proveedores al día</div></div>
+                    <div class="mock__col"><p>Finanzas</p><div class="task task--m">Cierre de mes</div><div class="task">Cartera</div></div>
+                    <div class="mock__col"><p>Decisiones</p><div class="task task--n">Responsable por proyecto</div><div class="task">Acta en un solo lugar</div></div>
+                  </div>
+                  <div class="mock__meter"><span>Tiempo recuperado del equipo este mes</span><div class="meter"><i style="--w:64%"></i></div><b>32 h</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="screen" data-screen="2">
+              <div class="mock__bar"><i></i><i></i><i></i><span>Sede digital · Organización</span></div>
+              <div class="mock__body">
+                <aside class="mock__side">
+                  <p class="mock__label">Organización</p>
+                  <span class="is-on">❋ Cultura visible</span><span>↗ Métricas operativas</span><span>→ Onboarding</span><span>▦ Áreas</span>
+                </aside>
+                <div class="mock__main">
+                  <p class="mock__h">Así trabajamos aquí</p>
+                  <div class="mock__cols">
+                    <div class="mock__col"><p>Valor</p><div class="task task--o">Cuidamos el tiempo</div><div class="task">Reuniones que deciden</div></div>
+                    <div class="mock__col"><p>Valor</p><div class="task task--m">Decidimos con datos</div><div class="task">Tablero semanal</div></div>
+                    <div class="mock__col"><p>Valor</p><div class="task task--n">Aprendemos juntos</div><div class="task">Revisión mensual</div></div>
+                  </div>
+                  <div class="mock__meter"><span>Persona nueva trabajando con autonomía</span><div class="meter"><i style="--w:86%"></i></div><b>1.ª semana</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Derecha: la historia de cada escala -->
+        <div class="scales__stories">
+          <article class="story-card" data-step="0">
+            <span class="story-card__chip">Adaptable</span>
+            <p class="story-card__text">Un sistema que se adapta a tu ritmo, no una receta única.</p>
+            <a href="para-ti/" class="story-card__link">ConSentido para ti →</a>
+          </article>
+          <article class="story-card" data-step="1">
+            <span class="story-card__chip">Co-creado</span>
+            <p class="story-card__text">Diseñamos contigo, no para ti. Por eso el cambio se queda cuando nos vamos.</p>
+            <a href="para-equipos/#procesos" class="story-card__link">Procesos ConSentido →</a>
+          </article>
+          <article class="story-card" data-step="2">
+            <span class="story-card__chip">Con sentido</span>
+            <p class="story-card__text">Lo que tu organización dice ser y lo que vive cada día, en la misma conversación.</p>
+            <a href="para-equipos/#cultura" class="story-card__link">Cultura ConSentido →</a>
+          </article>
+        </div>
+      </div>
+
+      <ol class="scales__progress" aria-label="Escalas">
+        <li data-step="0">Para ti</li>
+        <li data-step="1">Para tu equipo</li>
+        <li data-step="2">Para tu organización</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ ELIGE QUÉ ORDENAR (carrusel de categorías) ═════════ -->
+<section class="cats" id="aprende" aria-labelledby="cats-title">
+  <div class="wrap cats__head">
+    <h2 id="cats-title" class="h-sub">Elige qué quieres ordenar hoy</h2>
+    <div class="carousel-ctrl">
+      <button type="button" class="round-btn" data-scroll="-1" aria-label="Anterior" aria-controls="catsTrack">‹</button>
+      <button type="button" class="round-btn" data-scroll="1" aria-label="Siguiente" aria-controls="catsTrack">›</button>
+    </div>
+  </div>
+  <div class="cats__track" id="catsTrack" tabindex="0">
+    <a class="cat cat--orange" href="para-ti/"><span class="cat__ico">◷</span><h3>Tu tiempo</h3><p>Fugas, prioridades reales y tu cronotipo.</p><span class="cat__go">→</span></a>
+    <a class="cat cat--navy" href="para-ti/#sede"><span class="cat__ico">⌘</span><h3>Tu sede digital</h3><p>Un solo lugar para vida, trabajo y conocimiento.</p><span class="cat__go">→</span></a>
+    <a class="cat cat--mustard" href="para-ti/#sede"><span class="cat__ico">✦</span><h3>Tu emprendimiento</h3><p>Finanzas, facturación y pendientes al día.</p><span class="cat__go">→</span></a>
+    <a class="cat cat--cream" href="para-equipos/#procesos"><span class="cat__ico">⇄</span><h3>Procesos de tu equipo</h3><p>Flujos que devuelven el tiempo perdido en desorden.</p><span class="cat__go">→</span></a>
+    <a class="cat cat--orange" href="para-equipos/#cultura"><span class="cat__ico">❋</span><h3>Cultura</h3><p>Que el propósito pase del discurso al día a día.</p><span class="cat__go">→</span></a>
+    <a class="cat cat--navy" href="para-equipos/#sede"><span class="cat__ico">⚡</span><h3>Automatización e IA</h3><p>Make, n8n y Notion al servicio de las personas.</p><span class="cat__go">→</span></a>
+    <a class="cat cat--mustard" href="para-equipos/#cultura"><span class="cat__ico">↗</span><h3>Gestión del cambio</h3><p>Metodología ACMP para que el cambio se quede.</p><span class="cat__go">→</span></a>
+  </div>
+</section>
+
+<!-- ═════════ EL MÉTODO ═════════ -->
+<section class="method" id="metodo" aria-labelledby="method-title">
+  <div class="wrap method__grid">
+    <div class="method__intro">
+      <p class="eyebrow light">Tu ruta</p>
+      <h2 id="method-title" class="h-display light"><strong>El Método ConSentido</strong></h2>
+      <p class="method__lead">Seis pasos que usamos igual con una persona que con una organización. Lo que cambia es la escala.</p>
+      <div class="method__dots" role="tablist" aria-label="Pasos del Método">
+        <!-- generados por app.js -->
+      </div>
+    </div>
+
+    <div class="method__panel" id="methodPanel" role="tabpanel" aria-live="polite">
+      <!-- generado por app.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ PLANES (Para ti / Para tu equipo) ═════════ -->
+<section class="plans" id="planes" aria-labelledby="plans-title">
+  <div class="wrap">
+    <h2 id="plans-title" class="h-display center">Elige tu puerta de entrada</h2>
+    <p class="center lead">Un mismo método, dos escalas. Empieza gratis o conversemos de tu equipo.</p>
+
+    <div class="toggle" role="tablist" aria-label="Escala">
+      <button role="tab" id="tab-ti" aria-controls="panel-ti" aria-selected="true" data-tab="ti">Para ti</button>
+      <button role="tab" id="tab-equipo" aria-controls="panel-equipo" aria-selected="false" data-tab="equipo">Para tu equipo</button>
+      <span class="toggle__pill" aria-hidden="true"></span>
+    </div>
+
+    <!-- PARA TI -->
+    <div class="plan-panel" id="panel-ti" role="tabpanel" aria-labelledby="tab-ti">
+      <div class="compare">
+        <table>
+          <thead><tr><th>Lo que te llevas</th><th>Aprende solo</th><th>Con nosotros 1:1</th></tr></thead>
+          <tbody>
+            <tr><td>El Método ConSentido aplicado a tu vida</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><td>Plantilla de sede digital en Notion</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><td>Sistema co-diseñado contigo, no de catálogo</td><td class="n">—</td><td class="y">✓</td></tr>
+            <tr><td>Soporte por WhatsApp entre sesiones</td><td class="n">—</td><td class="y">✓</td></tr>
+            <tr><td>Semana de prueba en tu rutina real</td><td class="n">—</td><td class="y">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan">
+          <p class="plan__tag">Para empezar</p>
+          <h3>Newsletter</h3>
+          <p class="plan__who">Novedades que sí valen la pena</p>
+          <p class="plan__price">Gratis</p>
+          <p class="plan__note">Una carta semanal. Sin relleno.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="newsletter">Suscribirme</a>
+        </article>
+        <article class="plan">
+          <p class="plan__tag">Hazlo a tu ritmo</p>
+          <h3>Plantillas Notion</h3>
+          <p class="plan__who">Tu sede digital personal</p>
+          <p class="plan__price"><small>desde</small> $50.000</p>
+          <p class="plan__note">Captura, Hoy y semana, Proyectos y Revisión semanal.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="lista">Quiero la plantilla</a>
+        </article>
+        <article class="plan">
+          <p class="plan__tag">Próximamente</p>
+          <h3>Curso del Método</h3>
+          <p class="plan__who">Aprende a hacer con sentido</p>
+          <p class="plan__price"><small>desde</small> $300.000</p>
+          <p class="plan__note">Microclases cortas, ejercicios y tu sistema funcionando.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="lista">Lista de espera</a>
+        </article>
+        <article class="plan plan--star">
+          <span class="sticker plan__sticker">Más pedido</span>
+          <p class="plan__tag">Acompañamiento 1:1</p>
+          <h3>5 semanas contigo</h3>
+          <p class="plan__who">Una sesión semanal de 75 min</p>
+          <p class="plan__price"><small>desde</small> $1.200.000</p>
+          <p class="plan__note">Paga 50% al inicio y 50% en la semana 3. Virtual o presencial en Bogotá.</p>
+          <a href="#hablemos" class="btn btn--primary btn--block" data-intent="1a1">Agenda tu diagnóstico</a>
+        </article>
+      </div>
+
+      <ol class="weeks" aria-label="Las 5 semanas del acompañamiento">
+        <li><b>Semana 1</b><span>Radiografía y descarte</span></li>
+        <li><b>Semana 2</b><span>Co-diseño del sistema</span></li>
+        <li><b>Semana 3</b><span>Reglas de juego</span></li>
+        <li><b>Semana 4</b><span>Semana de prueba</span></li>
+        <li><b>Semana 5</b><span>Autonomía</span></li>
+      </ol>
+      <p class="panel-more"><a href="para-ti/">Ver todo lo de ConSentido para ti →</a></p>
+    </div>
+
+    <!-- PARA TU EQUIPO -->
+    <div class="plan-panel" id="panel-equipo" role="tabpanel" aria-labelledby="tab-equipo" hidden>
+      <div class="compare">
+        <table>
+          <thead><tr><th>Lo que tu organización recibe</th><th>Diagnóstico</th><th>Proyecto completo</th></tr></thead>
+          <tbody>
+            <tr><td>Mapa honesto del ruido operativo</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><td>Reto priorizado con métrica de éxito</td><td class="y">✓</td><td class="y">✓</td></tr>
+            <tr><td>Sede digital del equipo implementada</td><td class="n">—</td><td class="y">✓</td></tr>
+            <tr><td>Equipo formado y documentación viva</td><td class="n">—</td><td class="y">✓</td></tr>
+            <tr><td>Independencia para sostener el cambio</td><td class="n">—</td><td class="y">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan">
+          <p class="plan__tag">Sin compromiso</p>
+          <h3>Conversación</h3>
+          <p class="plan__who">30 minutos sobre tu operación</p>
+          <p class="plan__price">Gratis</p>
+          <p class="plan__note">Te decimos con honestidad por dónde empezar.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="equipo">Hablemos</a>
+        </article>
+        <article class="plan plan--star">
+          <span class="sticker plan__sticker">Puerta de entrada</span>
+          <p class="plan__tag">2 semanas</p>
+          <h3>Diagnóstico operativo</h3>
+          <p class="plan__who">Alcance acotado, resultado claro</p>
+          <p class="plan__price plan__price--sm">Precio cerrado</p>
+          <p class="plan__note">Sales con el mapa del problema y el primer paso definido.</p>
+          <a href="#hablemos" class="btn btn--primary btn--block" data-intent="equipo">Pide tu diagnóstico</a>
+        </article>
+        <article class="plan">
+          <p class="plan__tag">Metodología propia</p>
+          <h3>Procesos ConSentido</h3>
+          <p class="plan__who">Cuando la operación ahoga al equipo</p>
+          <p class="plan__price plan__price--sm">Según alcance</p>
+          <p class="plan__note">Los 6 pasos del Método y tu sede digital funcionando.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="equipo">Cotizar</a>
+        </article>
+        <article class="plan">
+          <p class="plan__tag">Metodología propia</p>
+          <h3>Cultura ConSentido</h3>
+          <p class="plan__who">Cuando el discurso y el día a día no coinciden</p>
+          <p class="plan__price plan__price--sm">Según alcance</p>
+          <p class="plan__note">Cuatro fases para que el propósito llegue a la operación.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="equipo">Cotizar</a>
+        </article>
+      </div>
+      <p class="center small muted">También formación in-company y acompañamiento de gestión del cambio. Proyectos de 2 a 6 meses.</p>
+      <p class="panel-more"><a href="para-equipos/">Ver Procesos, Cultura y la sede digital de tu equipo →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ COMUNIDAD ═════════ -->
+<section class="community" aria-labelledby="comm-title">
+  <div class="wrap">
+    <h2 id="comm-title" class="h-display center">Juntos hacemos con sentido</h2>
+    <p class="center lead">Por eso te guardamos un lugar.</p>
+    <div class="comm-grid">
+      <article class="comm reveal">
+        <span class="comm__ico comm__ico--o">◉</span>
+        <h3>Clase abierta</h3>
+        <p>Una clase en vivo y gratis para armar tu sede digital desde cero. Trae tus preguntas.</p>
+      </article>
+      <article class="comm reveal">
+        <span class="comm__ico comm__ico--n">✎</span>
+        <h3>Microclases</h3>
+        <p>Videos de 10 a 15 minutos para ordenar una cosa a la vez: captura, semana y revisión.</p>
+      </article>
+      <article class="comm reveal">
+        <span class="comm__ico comm__ico--m">❖</span>
+        <h3>Comunidad ConSentido</h3>
+        <p>Personas que hacen muchas cosas y quieren hacerlas bien sin perder su vida. Muy pronto.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ METAS ═════════ -->
+<section class="goals" aria-labelledby="goals-title">
+  <div class="goals__cloud" aria-hidden="true">
+    <span class="g g--1">Recuperar mis domingos</span>
+    <span class="g g--2">Ordenar mi emprendimiento</span>
+    <span class="g g--3">Tener vida propia</span>
+    <span class="g g--4">Dejar de apagar incendios</span>
+    <span class="g g--5">Delegar sin culpa</span>
+    <span class="g g--6">Un solo lugar para todo</span>
+    <span class="g g--7">Que mi equipo respire</span>
+  </div>
+  <div class="goals__content">
+    <h2 id="goals-title" class="h-display">Convierte lo que quieres<br /><span class="accent">en lo que haces</span></h2>
+    <p class="lead">Empieza a hacerlo realidad desde hoy.</p>
+    <a href="#planes" class="btn btn--primary btn--lg">Comenzar</a>
+  </div>
+</section>
+
+<!-- ═════════ CREDENCIALES ═════════ -->
+<section class="creds" aria-label="Credenciales">
+  <div class="wrap creds__row">
+    <p>Arquitectos de procesos, no instaladores de software.</p>
+    <div class="creds__seals">
+      <span class="seal">Notion Certified Consultants</span>
+      <span class="seal">ACMP · Gestión del cambio</span>
+      <span class="seal">Design Sprints</span>
+      <span class="seal">Make · n8n</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FAQ ═════════ -->
+<section class="faq" aria-labelledby="faq-title">
+  <div class="wrap faq__grid">
+    <div>
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="faq-title" class="h-display">Lo que nos preguntan antes de empezar</h2>
+    </div>
+    <div class="faq__list">
+      <details>
+        <summary>¿Esto es un curso de productividad?</summary>
+        <p>No. La productividad te pide hacer más. Nosotros medimos el tiempo recuperado: horas que vuelven a ti o a tu equipo porque el desorden dejó de cobrarlas.</p>
+      </details>
+      <details>
+        <summary>¿Necesito saber usar Notion?</summary>
+        <p>No. Te enseñamos lo justo con microclases cortas. Y si tu equipo usa otra herramienta, trabajamos con ella: lo importante es el proceso que vive dentro.</p>
+      </details>
+      <details>
+        <summary>¿Cómo funciona el acompañamiento 1:1?</summary>
+        <p>Son 5 semanas, una sesión semanal de 75 minutos y soporte por WhatsApp. Puede ser virtual o presencial en Bogotá. Al final tienes un sistema que funciona sin nosotros.</p>
+      </details>
+      <details>
+        <summary>¿Trabajan con empresas de cualquier tamaño?</summary>
+        <p>Nuestro punto fuerte son organizaciones de 20 a 200 personas que crecieron rápido: cooperación internacional, gobierno, empresas familiares, servicios y organizaciones de impacto.</p>
+      </details>
+      <details>
+        <summary>¿Puedo pagar por partes?</summary>
+        <p>Sí. En el 1:1 pagas 50% al inicio y 50% en la semana 3. Para empresas acordamos los pagos según el alcance del proyecto.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CTA FINAL / CONTACTO ═════════ -->
+<section class="final" id="hablemos" aria-labelledby="final-title">
+  <div class="wrap final__grid">
+    <div>
+      <h2 id="final-title" class="h-display light">¿Listo para que<br /><span class="accent">las cosas pasen?</span></h2>
+      <p class="final__quote">“Las cosas pasan cuando lo que eres está alineado con lo que haces.”</p>
+      <p class="final__sign">Daniela Vivas y Kevin Giraldo · Fundadores</p>
+    </div>
+
+    <form class="form" id="contactForm" novalidate>
+      <fieldset class="form__intents">
+        <legend>¿Qué te trae por aquí?</legend>
+        <label><input type="radio" name="intent" value="newsletter" data-btn="Quiero recibirla" checked /> <span>Recibir la newsletter</span></label>
+        <label><input type="radio" name="intent" value="lista" data-btn="Anótame en la lista" /> <span>Lista de espera</span></label>
+        <label><input type="radio" name="intent" value="1a1" data-btn="Agendar mi diagnóstico" /> <span>Acompañamiento 1:1</span></label>
+        <label><input type="radio" name="intent" value="equipo" data-btn="Hablemos de mi equipo" data-org /> <span>Mi equipo</span></label>
+      </fieldset>
+      <label class="field">
+        <span>Tu nombre</span>
+        <input type="text" name="nombre" autocomplete="name" required />
+      </label>
+      <label class="field">
+        <span>Tu correo</span>
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label class="field field--org" hidden>
+        <span>Organización y cargo</span>
+        <input type="text" name="org" autocomplete="organization" />
+      </label>
+      <button type="submit" class="btn btn--primary btn--block btn--lg" id="formBtn">Quiero recibirla</button>
+      <p class="form__msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a href="#top" class="logo logo--light"><span class="logo__mark" aria-hidden="true">C</span><span class="logo__word">Con<em>Sentido</em></span></a>
+      <p class="footer__claim">Estudio de operaciones. Hacemos con sentido.</p>
+    </div>
+    <nav aria-label="ConSentido">
+      <p class="footer__h">ConSentido</p>
+      <a href="#metodo">El Método</a>
+      <a href="para-ti/">Para ti</a>
+      <a href="para-equipos/">Para tu equipo</a>
+      <a href="para-ti/#aprende">Aprende</a>
+    </nav>
+    <nav aria-label="Contacto">
+      <p class="footer__h">Hablemos</p>
+      <!-- PLACEHOLDER: confirmar correo, LinkedIn e Instagram reales -->
+      <a href="mailto:hola@consentido.lat">hola@consentido.lat</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <span class="muted">Bogotá, Colombia</span>
+    </nav>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© 2026 ConSentido</span>
+    <span>Hecho con sentido en Bogotá</span>
+  </div>
+</footer>
+
+<!-- Botón flotante (en Platzi es WhatsApp). PLACEHOLDER: poner el número real en href="https://wa.me/57XXXXXXXXXX" -->
+<a class="fab" href="#hablemos" aria-label="Escríbenos">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>
+</a>
+
+<!-- ═════════ BUSCADOR (paleta tipo Platzi) ═════════ -->
+<div class="search" id="search" role="dialog" aria-modal="true" aria-labelledby="searchLabel" hidden>
+  <div class="search__backdrop" data-close></div>
+  <div class="search__box">
+    <label id="searchLabel" class="search__field">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="searchInput" placeholder="Ej: tiempo, Notion, mi equipo, cultura…" autocomplete="off" />
+      <kbd>Esc</kbd>
+    </label>
+    <ul class="search__results" id="searchResults" role="listbox"></ul>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
