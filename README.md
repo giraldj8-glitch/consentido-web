@@ -38,7 +38,7 @@ Las tres comparten `styles.css` y `app.js`. Un enlace a `para-equipos/#procesos`
 ## Pendientes antes de publicar
 
 - [ ] Reemplazar las 6 historias de ejemplo por casos reales con permiso (`index.html`, sección HISTORIAS).
-- [ ] Confirmar precios: plantillas desde $50.000, curso desde $300.000, 1:1 desde $1.200.000.
+- Precios para ti: Curso del Método + plantilla Notion $300.000 COP; acompañamiento 1:1 de 5 semanas $1.500.000 COP.
 - [ ] Correo real (hoy `hola@consentido.lat`), LinkedIn e Instagram en el footer.
 - [ ] Número de WhatsApp en el botón flotante (`href="https://wa.me/57XXXXXXXXXX"`).
 - [ ] Conectar el formulario (newsletter, Notion, Make o n8n) en `app.js`, bloque "PENDIENTE".

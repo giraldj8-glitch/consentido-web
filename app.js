@@ -217,13 +217,25 @@
     });
   }
 
+  /* ── Newsletter: formulario corto de solo correo ── */
+  $$('[data-news]').forEach(nf => nf.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const inp = $('input', nf);
+    const msg = $('.news-form__msg', nf);
+    const valid = inp.checkValidity() && inp.value.trim() !== '';
+    inp.setAttribute('aria-invalid', !valid);
+    if (!valid) { msg.textContent = 'Escribe un correo válido.'; return; }
+    // PENDIENTE: conectar con la herramienta de newsletter.
+    msg.textContent = '¡Listo! Te llega la próxima carta.';
+    nf.reset();
+  }));
+
   /* ── Buscador tipo Platzi ── */
   const index = [
     { k: 'tiempo fugas prioridades agenda semana vida', t: 'ConSentido para ti', s: 'Página', h: 'para-ti/' },
-    { k: 'notion plantilla sede digital personal cerebro digital orden', t: 'Tu sede digital personal', s: 'Para ti', h: 'para-ti/#sede' },
-    { k: '1:1 1a1 acompañamiento personal sesiones instalación', t: 'Acompañamiento 1:1 de 5 semanas', s: 'Para ti', h: 'para-ti/#sede' },
-    { k: 'curso aprender clases microclases formación', t: 'Cursos y recursos', s: 'Aprende', h: 'para-ti/#aprende' },
-    { k: 'newsletter correo novedades gratis', t: 'Newsletter semanal', s: 'Gratis', h: 'para-ti/#hablemos', intent: 'newsletter' },
+    { k: 'notion plantilla sede digital personal cerebro digital orden curso método', t: 'Curso del Método + plantilla Notion', s: '$300.000', h: 'para-ti/#sede' },
+    { k: '1:1 1a1 acompañamiento personal sesiones instalación', t: 'Acompañamiento 1:1 de 5 semanas', s: '$1.500.000', h: 'para-ti/#sede' },
+        { k: 'newsletter correo novedades gratis', t: 'Newsletter semanal', s: 'Gratis', h: 'para-ti/#aprende' },
     { k: 'equipo empresa organización', t: 'ConSentido para tu equipo', s: 'Página', h: 'para-equipos/' },
     { k: 'diagnóstico operativo', t: 'Diagnóstico operativo de 2 semanas', s: 'Para tu equipo', h: 'para-equipos/#formas' },
     { k: 'procesos operación flujos ruido operativo', t: 'Procesos ConSentido', s: 'Para tu equipo', h: 'para-equipos/#procesos' },

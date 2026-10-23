@@ -71,9 +71,9 @@
     </article>
     <article class="fcard fcard--b">
       <div class="fcard__cover fcard__cover--navy"><span>⌘</span></div>
-      <h3>Tu sede digital en Notion</h3>
+      <h3>Curso del Método</h3>
       <p class="fcard__by">por Kevin Giraldo</p>
-      <p class="fcard__meta">Plantilla + microclases</p>
+      <p class="fcard__meta">Curso + plantilla Notion</p>
     </article>
     <article class="fcard fcard--c">
       <div class="fcard__cover fcard__cover--mustard"><span>2 sem</span></div>
@@ -322,7 +322,7 @@
     <div class="plan-panel" id="panel-ti" role="tabpanel" aria-labelledby="tab-ti">
       <div class="compare">
         <table>
-          <thead><tr><th>Lo que te llevas</th><th>Aprende solo</th><th>Con nosotros 1:1</th></tr></thead>
+          <thead><tr><th>Lo que te llevas</th><th>Curso + plantilla</th><th>5 semanas 1:1</th></tr></thead>
           <tbody>
             <tr><td>El Método ConSentido aplicado a tu vida</td><td class="y">✓</td><td class="y">✓</td></tr>
             <tr><td>Plantilla de sede digital en Notion</td><td class="y">✓</td><td class="y">✓</td></tr>
@@ -333,37 +333,21 @@
         </table>
       </div>
 
-      <div class="plan-grid">
+      <div class="plan-grid plan-grid--2">
         <article class="plan">
-          <p class="plan__tag">Para empezar</p>
-          <h3>Newsletter</h3>
-          <p class="plan__who">Novedades que sí valen la pena</p>
-          <p class="plan__price">Gratis</p>
-          <p class="plan__note">Una carta semanal. Sin relleno.</p>
-          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="newsletter">Suscribirme</a>
-        </article>
-        <article class="plan">
-          <p class="plan__tag">Hazlo a tu ritmo</p>
-          <h3>Plantillas Notion</h3>
-          <p class="plan__who">Tu sede digital personal</p>
-          <p class="plan__price"><small>desde</small> $50.000</p>
-          <p class="plan__note">Captura, Hoy y semana, Proyectos y Revisión semanal.</p>
-          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="lista">Quiero la plantilla</a>
-        </article>
-        <article class="plan">
-          <p class="plan__tag">Próximamente</p>
-          <h3>Curso del Método</h3>
+          <p class="plan__tag">A tu ritmo</p>
+          <h3>Curso del Método + plantilla Notion</h3>
           <p class="plan__who">Aprende a hacer con sentido</p>
-          <p class="plan__price"><small>desde</small> $300.000</p>
-          <p class="plan__note">Microclases cortas, ejercicios y tu sistema funcionando.</p>
-          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="lista">Lista de espera</a>
+          <p class="plan__price">$300.000 <small class="plan__cur">COP</small></p>
+          <p class="plan__note">Microclases cortas, ejercicios y la plantilla de tu sede digital en Notion: Captura, Hoy y semana, Proyectos y Revisión semanal.</p>
+          <a href="#hablemos" class="btn btn--ghost btn--block" data-intent="lista">Quiero el curso</a>
         </article>
         <article class="plan plan--star">
           <span class="sticker plan__sticker">Más pedido</span>
           <p class="plan__tag">Acompañamiento 1:1</p>
           <h3>5 semanas contigo</h3>
           <p class="plan__who">Una sesión semanal de 75 min</p>
-          <p class="plan__price"><small>desde</small> $1.200.000</p>
+          <p class="plan__price">$1.500.000 <small class="plan__cur">COP</small></p>
           <p class="plan__note">Paga 50% al inicio y 50% en la semana 3. Virtual o presencial en Bogotá.</p>
           <a href="#hablemos" class="btn btn--primary btn--block" data-intent="1a1">Agenda tu diagnóstico</a>
         </article>
@@ -376,6 +360,20 @@
         <li><b>Semana 4</b><span>Semana de prueba</span></li>
         <li><b>Semana 5</b><span>Autonomía</span></li>
       </ol>
+      <div class="news-strip reveal">
+        <span class="news-strip__ico" aria-hidden="true">✉</span>
+        <div class="news-strip__copy">
+          <p class="news-strip__tag">Gratis · cada semana</p>
+          <h3>Novedades que sí valen la pena</h3>
+          <p>La newsletter de ConSentido: una idea práctica por semana para ordenar tu vida y tu trabajo. Sin relleno.</p>
+        </div>
+        <form class="news-form" data-news novalidate>
+          <label class="sr-only" for="newsHome">Tu correo</label>
+          <input type="email" id="newsHome" name="email" placeholder="tu@correo.com" autocomplete="email" required />
+          <button type="submit" class="btn btn--primary">Suscribirme</button>
+          <p class="news-form__msg" role="status"></p>
+        </form>
+      </div>
       <p class="panel-more"><a href="para-ti/">Ver todo lo de ConSentido para ti →</a></p>
     </div>
 
@@ -536,7 +534,7 @@
       <fieldset class="form__intents">
         <legend>¿Qué te trae por aquí?</legend>
         <label><input type="radio" name="intent" value="newsletter" data-btn="Quiero recibirla" checked /> <span>Recibir la newsletter</span></label>
-        <label><input type="radio" name="intent" value="lista" data-btn="Anótame en la lista" /> <span>Lista de espera</span></label>
+        <label><input type="radio" name="intent" value="lista" data-btn="Quiero el curso" /> <span>Curso + plantilla</span></label>
         <label><input type="radio" name="intent" value="1a1" data-btn="Agendar mi diagnóstico" /> <span>Acompañamiento 1:1</span></label>
         <label><input type="radio" name="intent" value="equipo" data-btn="Hablemos de mi equipo" data-org /> <span>Mi equipo</span></label>
       </fieldset>
